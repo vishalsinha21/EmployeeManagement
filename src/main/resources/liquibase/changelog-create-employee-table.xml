@@ -4,29 +4,29 @@
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
 
     <changeSet id="create_employee_table" author="sinhav">
-        <createTable tableName="Employee">
-            <column name="EmployeeId" type="BIGINT">
+        <createTable tableName="employee">
+            <column name="employeeid" type="BIGINT">
                 <constraints nullable="false"/>
             </column>
-            <column name="FirstName" type="VARCHAR(50)">
+            <column name="firstname" type="VARCHAR(50)">
                 <constraints nullable="true"/>
             </column>
-            <column name="LastName" type="varchar(50)">
+            <column name="lastname" type="varchar(50)">
                 <constraints nullable="true"/>
             </column>
-            <column name="Phone" type="varchar(50)">
+            <column name="phone" type="varchar(50)">
                 <constraints nullable="true"/>
             </column>
-            <column name="JoiningDate" type="Date">
+            <column name="joiningdate" type="Date">
                 <constraints nullable="true"/>
             </column>
         </createTable>
     </changeSet>
 
     <changeSet id="add_pk_for_employee" author="sinhav">
-        <addPrimaryKey columnNames="EmployeeId"
+        <addPrimaryKey columnNames="employeeid"
                        constraintName="pk_employee"
-                       tableName="Employee" />
+                       tableName="employee" />
     </changeSet>
 
 </databaseChangeLog>

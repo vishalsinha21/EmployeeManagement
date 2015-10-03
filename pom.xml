@@ -103,16 +103,11 @@
             <artifactId>jackson-xc</artifactId>
             <version>${jackson.version}</version>
         </dependency>
-        <!-- Derby database -->
+        <!-- Postgres database -->
         <dependency>
-            <groupId>org.apache.derby</groupId>
-            <artifactId>derby</artifactId>
-            <version>10.4.2.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.derby</groupId>
-            <artifactId>derbyclient</artifactId>
-            <version>10.4.2.0</version>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>9.4-1200-jdbc41</version>
         </dependency>
         <!-- Servlet -->
         <dependency>
@@ -152,10 +147,10 @@
                 <version>3.3.2</version>
                 <configuration>
                     <changeLogFile>${basedir}/src/main/resources/liquibase/master.xml</changeLogFile>
-                    <driver>org.apache.derby.jdbc.ClientDriver</driver>
-                    <url>jdbc:derby://localhost:1527/testdb;create=true</url>
-                    <username>app</username>
-                    <password>app</password>
+                    <driver>org.postgresql.Driver</driver>
+                    <url>jdbc:postgresql://localhost:5432/testdb</url>
+                    <username></username>
+                    <password></password>
                 </configuration>
             </plugin>
             <!-- In memory DB plugin -->
