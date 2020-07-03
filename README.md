@@ -1,3 +1,5 @@
+Created this version specially to work with Postgres and to deploy on Heroku.
+
 ## Maven Spring Web Starter Project
 
 1. Jetty plugin as embedded server
