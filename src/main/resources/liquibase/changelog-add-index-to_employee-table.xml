@@ -1,10 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
 
-    <include file="changelog-create-employee-table.xml" relativeToChangelogFile="true"/>
-    <include file="changelog-add-employee-data.xml" relativeToChangelogFile="true"/>
-    <include file="changelog-add-index-to_employee-table.xml" relativeToChangelogFile="true"/>
+  <changeSet id="add-index-to-employee-table" author="sinhav">
+
+    <createIndex tableName="employee">
+      <column name="employeeid"/>
+    </createIndex>
+
+  </changeSet>
+
 
 </databaseChangeLog>
